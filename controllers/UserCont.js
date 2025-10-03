@@ -4,10 +4,10 @@ const sendotp = require("../middleware/SendOtp")
 const bcrypt = require("bcrypt")
 const Product = require("../Models/Product")
 // const { useImperativeHandle } = require("react")
-const saltrounds = 10
 const Coupan = require("../Models/Coupans")
 const { createorder } = require("../middleware/AddOrder")
 
+const saltrounds = 10
 
 module.exports.adduser = async (req, res, next) => {
    try {

@@ -2,6 +2,8 @@ const Admin=require("../Models/Admin")
 const Product=require("../Models/Product")
 const User=require("../Models/User")
 const nodemailer=require("nodemailer")
+
+
 const transporter = nodemailer.createTransport({
     service: "gmail",
     auth:

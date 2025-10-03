@@ -1,14 +1,14 @@
-const express=require("express")
+const express = require("express");
+const mongoose = require("mongoose");
+const path = require("path");
+const session = require("express-session");
+const dotenv = require("dotenv");
+const MongoStore = require("connect-mongo"); // Note: You might need to access a specific property depending on how this package is structured.
+const UserRouter = require("./routes/UserRoute.js");
+const AdminRouter = require("./routes/AdminRoute.js");
+const ProductRouter = require("./routes/Products.js");
+
 const app=express()
-const mongoose=require("mongoose")
-const path=require("path")
-const Port=3001
-const UserRouter=require("./routes/UserRoute")
-const AdminRouter=require("./routes/AdminRoute")
-const ProductRouter=require("./routes/Products")
-const session=require("express-session")
-const dotenv=require("dotenv")
-const MongoStore=require("connect-mongo")
 dotenv.config()
 
 app.use(session({

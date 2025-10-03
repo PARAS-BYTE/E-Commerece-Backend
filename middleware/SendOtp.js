@@ -2,6 +2,10 @@ const crypto = require("crypto")
 const User = require("../Models/User")
 const nodemailer=require("nodemailer")
 const Admin=require("../Models/Admin")
+
+
+
+
 const transporter = nodemailer.createTransport({
     service: "gmail",
     auth:
