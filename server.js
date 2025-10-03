@@ -7,7 +7,9 @@ const UserRouter=require("./routes/UserRoute")
 const AdminRouter=require("./routes/AdminRoute")
 const ProductRouter=require("./routes/Products")
 const session=require("express-session")
+const dotenv=require("dotenv")
 const MongoStore=require("connect-mongo")
+dotenv.config()
 
 app.use(session({
     secret:"Keyboard CAt",
@@ -34,7 +36,7 @@ app.use("/product",ProductRouter)
 
 mongoose.connect("mongodb+srv://parasji014_db_user:parasji@cluster1.1dip1zl.mongodb.net/?retryWrites=true&w=majority&appName=Cluster1")
 .then(()=>{
-    app.listen(Port,(err)=>{
+    app.listen(process.env.Port,(err)=>{
         if(!err)console.log('Ported')
     })
 })
